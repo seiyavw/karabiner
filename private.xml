@@ -1,0 +1,62 @@
+<?xml version="1.0"?>
+<root>
+
+  <devicevendordef>
+    <vendorname>Logitech</vendorname>
+    <vendorid>0x046d</vendorid>
+  </devicevendordef>
+  <deviceproductdef>
+    <productname>M560</productname>
+    <productid>0xc52b</productid>
+  </deviceproductdef>
+
+   <item>
+
+    <name>Logitech M560 mouse</name>
+    <appendix>Support for extra buttons</appendix>
+
+    <item>
+      <name>Reverse mouse scroll in Logicool M560 wireless mouse</name>
+      <identifier>private.remap.reverse_mouse_scroll</identifier>
+      <device_only>DeviceVendor::Logitech, DeviceProduct::M560</device_only>
+      <autogen>__FlipScrollWheel__ Option::FLIPSCROLLWHEEL_VERTICAL</autogen>
+    </item>
+
+    <item>
+      <name>Forward Button to Browser Go Forward</name>
+      <appendix>Button on the left side of M560</appendix>
+      <identifier>privaite.device.logitech.m560.browser.goforward</identifier>
+      <device_only>DeviceVendor::LOGITECH, DeviceProduct::M560</device_only>
+      <autogen>
+        __KeyToKey__
+        KeyCode::COMMAND_R,
+        KeyCode::CURSOR_RIGHT, ModifierFlag::COMMAND_L
+      </autogen>
+    </item>
+
+    <item>
+      <name>Back Button to Browser Go Back</name>
+      <appendix>Button on the left side of M560</appendix>
+      <identifier>private.device.logitech.m560.browser.goback</identifier>
+      <device_only>DeviceVendor::Logitech, DeviceProduct::M560</device_only>
+      <autogen>
+        __KeyToKey__
+        KeyCode::D, ModifierFlag::COMMAND_L,
+        KeyCode::CURSOR_LEFT, ModifierFlag::COMMAND_L
+      </autogen>
+    </item>
+
+    <item>
+      <name>Home button (under the wheel) to MissionControl</name>
+      <appendix>Button in the middle of M560 under the wheel</appendix>
+      <identifier>private.device.logitech.m560.osx.missioncontrol</identifier>
+      <device_only>DeviceVendor::Logitech, DeviceProduct::M560</device_only>
+      <autogen>
+        __KeyToKey__
+        KeyCode::OPTION_L, KeyCode::COMMAND_L,
+        KeyCode::CURSOR_UP, ModifierFlag::CONTROL_L
+      </autogen>
+    </item>
+
+  </item>
+</root>
